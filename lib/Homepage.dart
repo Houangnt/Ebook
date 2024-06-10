@@ -92,7 +92,7 @@ class _HomepageState extends State<Homepage> {
                           color: Colors.white,
                           child: Center(
                             child: Text(
-                              " “An equation for me has no meaning, unless it expresses a thought of God.”",
+                              " “In the book reading app, the voice reading feature turns every word into sound, opening a new window for the blind to explore the world of each story”",
                               textAlign: TextAlign.center,
                               maxLines: 2,
                               overflow: TextOverflow.fade,
