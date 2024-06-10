@@ -3,13 +3,18 @@ class Booksdata {
   String authorName;
   String imagePath;
   int percentageCompleted;
-  double rating ;
-  Booksdata(
-      {this.authorName,
-      this.bookname,
-      this.percentageCompleted,
-      this.imagePath,this.rating});
+  double rating;
+
+  Booksdata({
+    required this.bookname, // Making bookname required
+    this.authorName = '',
+    this.percentageCompleted = 0,
+    this.imagePath = '',
+    this.rating = 0.0,
+  });
 }
+
+
 
 List<Booksdata> continueReading = [
   Booksdata(

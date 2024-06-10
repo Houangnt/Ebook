@@ -52,7 +52,7 @@ class _HomepageState extends State<Homepage> {
                           child: FittedBox(
                               fit: BoxFit.scaleDown,
                               child: Text(
-                                "Hello Aman",
+                                "Hello UET-VNU",
                                 style: GoogleFonts.lato(
                                     textStyle: TextStyle(
                                   fontWeight: FontWeight.w500,
@@ -70,7 +70,7 @@ class _HomepageState extends State<Homepage> {
                                   constraints.maxHeight * 0.3),
                               image: DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: AssetImage('assets/images/Aman.jpg'))),
+                                  image: AssetImage('assets/images/UET.png'))),
                         )
                       ],
                     );
