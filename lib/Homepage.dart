@@ -111,7 +111,7 @@ class _HomepageState extends State<Homepage> {
                           color: Colors.white,
                           child: Center(
                             child: Text(
-                              "― UET-VNU",
+                              "― Group 12",
                               textAlign: TextAlign.center,
                               maxLines: 4,
                               overflow: TextOverflow.fade,

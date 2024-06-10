@@ -7,7 +7,7 @@
   <img src="https://github.com/Houangnt/Ebook/blob/main/assets/images/2.png" width="180" title="ContentPage">  ➜ Listen
   <img src="https://github.com/Houangnt/Ebook/blob/main/assets/images/4.png" width="180" title="Listen">  ➜  Read
   <img src="https://github.com/Houangnt/Ebook/blob/main/assets/images/3.png" width="180" title="Read">    ➜  Summarize 
-  <img src="https://github.com/Houangnt/Ebook/blob/main/assets/images/3.png" width="180" title="Summarize">
+  <img src="https://github.com/Houangnt/Ebook/blob/main/assets/images/5.png" width="180" title="Summarize">
   
   
   
