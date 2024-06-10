@@ -130,7 +130,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                 child: FittedBox(
                                   child: Text(
                                     "⭐ " + 4.5.toString(),
-                                    style: GoogleFonts.lato(
+                                    style: GoogleFonts.roboto(
                                         textStyle: TextStyle(
                                             fontWeight: FontWeight.bold)),
                                   ),
@@ -170,7 +170,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   child: FittedBox(
                     child: Text(
                       widget.bookname,
-                      style: GoogleFonts.lato(
+                      style: GoogleFonts.roboto(
                           fontWeight: FontWeight.bold,
                           color: Color.fromRGBO(66, 66, 86, 1)),
                     ),
@@ -185,7 +185,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   child: FittedBox(
                     child: Text(
                       widget.authorname,
-                      style: GoogleFonts.lato(
+                      style: GoogleFonts.roboto(
                           fontWeight: FontWeight.bold,
                           color: Color.fromRGBO(142, 142, 154, 1)),
                     ),
@@ -216,7 +216,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       child: FittedBox(
                                         child: Text(
                                           "2010",
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   color: Color.fromRGBO(
                                                           66, 66, 86, 1)
@@ -235,7 +235,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                         fit: BoxFit.scaleDown,
                                         child: Text(
                                           "Published in",
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   fontSize: 20,
                                                   color: Color.fromRGBO(
@@ -270,7 +270,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       child: FittedBox(
                                         child: Text(
                                           "156",
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   color: Color.fromRGBO(
                                                           66, 66, 86, 1)
@@ -287,7 +287,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                         fit: BoxFit.scaleDown,
                                         child: Text(
                                           "Pages",
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   fontSize: 20,
                                                   color: Color.fromRGBO(
@@ -321,7 +321,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       child: FittedBox(
                                         child: Text(
                                           "187",
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   color: Color.fromRGBO(
                                                           66, 66, 86, 1)
@@ -338,7 +338,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                         fit: BoxFit.scaleDown,
                                         child: Text(
                                           "Reviews",
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   fontSize: 20,
                                                   color: Color.fromRGBO(
@@ -366,7 +366,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   child: FittedBox(
                     child: Text(
                       "About",
-                      style: GoogleFonts.lato(
+                      style: GoogleFonts.roboto(
                           textStyle: TextStyle(
                         fontWeight: FontWeight.w400,
                         color: Color.fromRGBO(66, 66, 86, 1),
@@ -381,9 +381,9 @@ class _DetailsPageState extends State<DetailsPage> {
                   width: size.width,
                   child: Center(
                     child: Text(
-                      "The Arsonist, by the acclaimed author of The Tall Man, is the story of that man, the fire he lit, and the people who were killed. On the scorching February day in 2009 that became known as Black Saturday, a man lit two fires in Victoria's Latrobe Valley, then sat on the roof of his house to watch the inferno.",
+                      "Harry Potter là một loạt tiểu thuyết huyền bí gồm bảy phần của nhà văn Anh Quốc J. K. Rowling. Bộ truyện viết về những cuộc phiêu lưu phù thủy của cậu bé Harry Potter cùng hai người bạn thân là Ron Weasley và Hermione Granger.",
                       overflow: TextOverflow.fade,
-                      style: GoogleFonts.lato(
+                      style: GoogleFonts.roboto(
                           textStyle: TextStyle(
                         fontWeight: FontWeight.w300,
                         color: Color.fromRGBO(66, 66, 86, 1),
@@ -438,8 +438,8 @@ class _DetailsPageState extends State<DetailsPage> {
                                         height: constraints.maxHeight * 0.6,
                                         width: constraints.maxWidth * 0.45,
                                         child: FittedBox(
-                                          child: Text("Read",
-                                              style: GoogleFonts.lato(
+                                          child: Text("Đọc",
+                                              style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       fontWeight: FontWeight.w400,
                                                       color: Colors.white))),
@@ -491,8 +491,8 @@ class _DetailsPageState extends State<DetailsPage> {
                                         height: constraints.maxHeight * 0.6,
                                         width: constraints.maxWidth * 0.45,
                                         child: FittedBox(
-                                          child: Text("Listen",
-                                              style: GoogleFonts.lato(
+                                          child: Text("Nghe",
+                                              style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       fontWeight: FontWeight.w400,
                                                       color: Colors.white))),

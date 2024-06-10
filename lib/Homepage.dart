@@ -53,7 +53,7 @@ class _HomepageState extends State<Homepage> {
                               fit: BoxFit.scaleDown,
                               child: Text(
                                 "Hello UET-VNU",
-                                style: GoogleFonts.lato(
+                                style: GoogleFonts.roboto(
                                     textStyle: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 19,
@@ -92,11 +92,11 @@ class _HomepageState extends State<Homepage> {
                           color: Colors.white,
                           child: Center(
                             child: Text(
-                              " “In the book reading app, the voice reading feature turns every word into sound, opening a new window for the blind to explore the world of each story”",
+                              " “Transform every word into sound, opening a new window for the blind to explore the world of each story”",
                               textAlign: TextAlign.center,
-                              maxLines: 2,
+                              maxLines: 3,
                               overflow: TextOverflow.fade,
-                              style: GoogleFonts.lato(
+                              style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                       fontWeight: FontWeight.w400,
                                       color: Colors.brown.withOpacity(0.7),
@@ -111,11 +111,11 @@ class _HomepageState extends State<Homepage> {
                           color: Colors.white,
                           child: Center(
                             child: Text(
-                              "― Srinivasa Ramanujan",
+                              "― UET-VNU",
                               textAlign: TextAlign.center,
                               maxLines: 4,
                               overflow: TextOverflow.fade,
-                              style: GoogleFonts.lato(
+                              style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                       fontWeight: FontWeight.w300,
                                       fontSize: 17)),
@@ -170,7 +170,7 @@ class _HomepageState extends State<Homepage> {
                                           borderSide: BorderSide.none),
                                       filled: false,
                                       hintText: "Search by Title,Author,Genre",
-                                      hintStyle: GoogleFonts.lato(
+                                      hintStyle: GoogleFonts.roboto(
                                           textStyle: TextStyle(
                                               fontSize: 13,
                                               color: Colors.black
@@ -238,7 +238,7 @@ class _HomepageState extends State<Homepage> {
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 "Continue Reading",
-                                                style: GoogleFonts.lato(
+                                                style: GoogleFonts.roboto(
                                                     textStyle: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w600,
@@ -256,7 +256,7 @@ class _HomepageState extends State<Homepage> {
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 "view all",
-                                                style: GoogleFonts.lato(
+                                                style: GoogleFonts.roboto(
                                                     textStyle: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w400,
@@ -355,7 +355,7 @@ class _HomepageState extends State<Homepage> {
                                                         Alignment.centerLeft,
                                                     child: Text(
                                                       current[index].bookname,
-                                                      style: GoogleFonts.lato(
+                                                      style: GoogleFonts.roboto(
                                                           color: Color.fromRGBO(
                                                               66, 66, 86, 1),
                                                           fontWeight:
@@ -429,7 +429,7 @@ class _HomepageState extends State<Homepage> {
                                                                     .percentageCompleted
                                                                     .toString() +
                                                                 "%",
-                                                            style: GoogleFonts.lato(
+                                                            style: GoogleFonts.roboto(
                                                                 textStyle: TextStyle(
                                                                     fontWeight:
                                                                         FontWeight
@@ -485,7 +485,7 @@ class _HomepageState extends State<Homepage> {
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 "Popular",
-                                                style: GoogleFonts.lato(
+                                                style: GoogleFonts.roboto(
                                                     textStyle: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w600,
@@ -504,7 +504,7 @@ class _HomepageState extends State<Homepage> {
                                               fit: BoxFit.scaleDown,
                                               child: Text(
                                                 "view all",
-                                                style: GoogleFonts.lato(
+                                                style: GoogleFonts.roboto(
                                                     textStyle: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w400,
@@ -556,7 +556,7 @@ class _HomepageState extends State<Homepage> {
                                             child: FittedBox(
                                                 child: Text(
                                               "Self-Help",
-                                              style: GoogleFonts.lato(
+                                              style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       color: indx == 0
                                                           ? Colors.white
@@ -591,7 +591,7 @@ class _HomepageState extends State<Homepage> {
                                             child: FittedBox(
                                                 child: Text(
                                               "Finance",
-                                              style: GoogleFonts.lato(
+                                              style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       color: indx == 1
                                                           ? Colors.white
@@ -626,7 +626,7 @@ class _HomepageState extends State<Homepage> {
                                             child: FittedBox(
                                                 child: Text(
                                               "Fantasy",
-                                              style: GoogleFonts.lato(
+                                              style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       color: indx == 2
                                                           ? Colors.white
@@ -661,7 +661,7 @@ class _HomepageState extends State<Homepage> {
                                             child: FittedBox(
                                                 child: Text(
                                               "Comedy",
-                                              style: GoogleFonts.lato(
+                                              style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       color: indx == 3
                                                           ? Colors.white
@@ -754,7 +754,7 @@ class _HomepageState extends State<Homepage> {
                                                                 popular[index]
                                                                     .rating
                                                                     .toString(),
-                                                            style: GoogleFonts.lato(
+                                                            style: GoogleFonts.roboto(
                                                                 textStyle: TextStyle(
                                                                     fontWeight:
                                                                         FontWeight
@@ -783,7 +783,7 @@ class _HomepageState extends State<Homepage> {
                                                         Alignment.centerLeft,
                                                     child: Text(
                                                       popular[index].bookname,
-                                                      style: GoogleFonts.lato(
+                                                      style: GoogleFonts.roboto(
                                                           color: Color.fromRGBO(
                                                               66, 66, 86, 1),
                                                           fontWeight:
@@ -800,7 +800,7 @@ class _HomepageState extends State<Homepage> {
                                                   child: FittedBox(
                                                       child: Text(
                                                     popular[index].authorName,
-                                                    style: GoogleFonts.lato(
+                                                    style: GoogleFonts.roboto(
                                                         textStyle: TextStyle(
                                                             fontWeight:
                                                                 FontWeight.w300,

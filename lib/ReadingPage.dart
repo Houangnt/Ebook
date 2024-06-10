@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class ReadingPage extends StatefulWidget {
   final String imageAddress;
   final String bookname;
   final String authorname;
 
-  // Use required keyword for non-nullable fields
   ReadingPage({
     required this.authorname,
     required this.bookname,
@@ -18,13 +19,51 @@ class ReadingPage extends StatefulWidget {
 }
 
 class _ReadingPageState extends State<ReadingPage> {
+  String text = "Ông bà Dursley, nhà số 4 đường Privet Drive, tự hào mà nói họ hoàn toàn bình thường, cám ơn bà con quan tâm. Bà con đừng trông mong gì họ tin vào những chuyện kỳ lạ hay bí ẩn, đơn giản là vì họ chẳng hơi đâu bận tâm đến mấy trò vớ vẩn đó.Ông Dursley là giám đốc một công ty gọi là Grunnings, chuyên sản suất máy khoan. Ông là một người cao lớn lực lưỡng, cổ gần như không có, nhưng lại có một bộ ria mép vĩ đại. Bà Dursley thì ốm nhom, tóc vàng, với một cái cổ dài gấp đôi bình thường, rất tiện cho bà nhóng qua hàng rào để dòm ngó nhà hàng xóm. Hai ông bà Dursley có một cậu quý tử tên là Dudley, mà theo ý họ thì không thể có đứa bé nào trên đời này ngoan hơn được nữa.Gia đình Dursley có mọi thứ mà họ muốn, nhưng họ cũng có một bí mật, và nỗi sợ hãi lớn nhất của họ là cái bí mật đó bị ai đó bật mí. Họ sợ mình sẽ khó mà chịu đựng nổi nếu câu chuyện về gia đình Potter bị người ta khám phá. Bà Potter là em gái của bà Dursley, nhưng nhiều năm rồi họ chẳng hề gặp gỡ nhau. Bà Dursley lại còn giả đò như mình không có chị em nào hết, bởi vì cô em cùng ông chồng vô tích sự của cô ta chẳng thể nào có được phong cách của gia đình Dursley.Ông bà Dursley vẫn rùng mình ớn lạnh mỗi khi nghĩ đến chuyện hàng xóm sẽ nói gì nếu thấy gia đình Potter xuất hiện trước cửa nhà mình. Họ biết gia đình Potter có một đứa con trai nhỏ, nhưng họ cũng chưa từng nhìn thấy nó. Đứa bé đó cũng là một lý do khiến họ tránh xa gia đình Potter: Họ không muốn cậu quý tử Dudley chung chạ với một thằng con nít nhà Potter.Vào một buổi sáng thứ ba xám xịt âm u, ông bà Dursley thức dậy, chẳng hề cảm thấy chút gì rằng bầu trời đầy mây kia đang báo hiệu những điều lạ lùng bí ẩn sắp xảy ra trên cả nước Anh. Ông Dursley ậm ừ khi chọn cái cà-vạt chán nhất thế giới đeo vào cổ đi làm. Bà Dursley thì lách chách nói trong lúc vật lộn với cậu quý tử Dudley đang gào khóc vùng vẫy, không chịu ngồi ăn sáng tử tế. Không một ai để ý đến một con cú to và đen thui bay xẹt qua cửa sổ.";
+
+  final apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyBxAD3w8Sj177gLUqdgqHL_XS8iix1YHLM';
+  final headers = {
+    'Content-Type': 'application/json',
+  };
+
+  Future<void> summarizeText() async {
+    var data = {
+      "contents": [
+        {
+          "parts": [
+            {
+              'text': text
+            }
+          ]
+        }
+      ],
+    };
+
+    try {
+      final response = await http.post(
+        Uri.parse(apiUrl),
+        headers: headers,
+        body: json.encode(data),
+      );
+
+      if (response.statusCode == 200) {
+        var result = json.decode(response.body);
+        setState(() {
+          text = result['candidates'][0]['content']['parts'][0]['text'];
+        });
+      } else {
+        print('Failed to summarize text: ${response.statusCode}');
+        print('Response body: ${response.body}');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    String text =
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum lectus lacus, in cursus sem volutpat non. Sed nisi ex, vestibulum quis lobortis et, scelerisque hendrerit velit. Maecenas convallis volutpat quam a luctus. Morbi metus massa, cursus in arcu et, dapibus iaculis odio. Quisque suscipit, erat ac ornare iaculis, nibh sapien semper dui, imperdiet cursus turpis libero ut justo. Duis in tincidunt neque, eu iaculis nulla. In lorem dolor, porttitor hendrerit dui feugiat, convallis tincidunt lectus. Nullam auctor, lorem ut consectetur dictum, quam mauris eleifend arcu, eu fermentum urna neque sit amet ante. Maecenas libero felis, consectetur at metus eu, vestibulum sollicitudin erat. Nullam euismod sapien eu dui mollis, vel imperdiet urna commodo. Maecenas semper elementum magna, eu commodo quam finibus non. Mauris condimentum nisl leo, quis dignissim augue gravida et. Pellentesque tincidunt vitae erat nec interdum. Praesent a dui sagittis, luctus metus nec, accumsan eros. Sed quis scelerisque velit, ut ultrices tellus. Praesent dignissim lacus a lectus suscipit sagittis. Aliquam luctus nibh at consectetur rutrum. Proin congue mauris elementum varius placerat. Pellentesque vulputate ante eu nunc placerat, eu egestas elit ornare. Nullam ac ipsum ultrices ante venenatis faucibus vehicula quis risus. Vestibulum ut turpis quis sapien dictum mattis eget iaculis nisl. In porttitor felis eu metus eleifend pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique nulla sed felis sollicitudin consequat.";
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      //backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
@@ -37,7 +76,6 @@ class _ReadingPageState extends State<ReadingPage> {
                   padding: EdgeInsets.symmetric(horizontal: size.width * 0.01),
                   height: size.height * 0.085,
                   width: size.width,
-                  //color: Colors.red,
                   child: LayoutBuilder(
                     builder: (context, constraints) {
                       return Row(
@@ -47,7 +85,6 @@ class _ReadingPageState extends State<ReadingPage> {
                             onTap: () => Navigator.pop(context),
                             child: Container(
                               padding: EdgeInsets.all(constraints.maxHeight * 0.18),
-                              //color: Colors.black,
                               height: constraints.maxHeight * 0.8,
                               width: constraints.maxWidth * 0.15,
                               child: FittedBox(
@@ -59,20 +96,17 @@ class _ReadingPageState extends State<ReadingPage> {
                             ),
                           ),
                           Container(
-                            //color: Colors.red,
                             height: constraints.maxHeight * 0.85,
                             width: constraints.maxWidth * 0.51,
                             child: Column(
                               children: [
                                 Container(
-                                  // padding: EdgeInsets.symmetric(horizontal: constraints.maxWidth*),
-                                  //color: Colors.purple,
                                   height: constraints.maxHeight * 0.85 * 0.7,
                                   width: constraints.maxWidth * 0.35,
                                   child: FittedBox(
                                     child: Text(
                                       widget.bookname,
-                                      style: GoogleFonts.lato(
+                                      style: GoogleFonts.roboto(
                                         textStyle: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: Color.fromRGBO(66, 66, 86, 1),
@@ -82,14 +116,12 @@ class _ReadingPageState extends State<ReadingPage> {
                                   ),
                                 ),
                                 Container(
-                                  // padding: EdgeInsets.symmetric(horizontal: constraints.maxWidth*),
-                                  //color: Colors.yellow,
                                   height: constraints.maxHeight * 0.85 * 0.3,
                                   width: constraints.maxWidth * 0.35,
                                   child: FittedBox(
                                     child: Text(
                                       "Chapter 2",
-                                      style: GoogleFonts.lato(
+                                      style: GoogleFonts.roboto(
                                         textStyle: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: Color.fromRGBO(142, 142, 154, 1),
@@ -103,7 +135,6 @@ class _ReadingPageState extends State<ReadingPage> {
                           ),
                           Container(
                             padding: EdgeInsets.all(constraints.maxHeight * 0.18),
-                            //color: Colors.black,
                             height: constraints.maxHeight * 0.8,
                             width: constraints.maxWidth * 0.15,
                             child: FittedBox(
@@ -120,14 +151,13 @@ class _ReadingPageState extends State<ReadingPage> {
                 ),
                 Container(
                   padding: EdgeInsets.all(size.height * 0.01),
-                  //color: Colors.red,
                   height: size.height * 0.7,
                   width: size.width,
                   child: Center(
                     child: Text(
                       text,
                       overflow: TextOverflow.fade,
-                      style: GoogleFonts.lato(
+                      style: GoogleFonts.roboto(
                         textStyle: TextStyle(
                           fontWeight: FontWeight.w400,
                           color: Color.fromRGBO(101, 101, 101, 1),
@@ -160,12 +190,11 @@ class _ReadingPageState extends State<ReadingPage> {
                   height: size.height * 0.015,
                 ),
                 Container(
-                  //color: Colors.amber,
                   height: size.height * 0.025,
                   child: Center(
                     child: Text(
                       "173 of 230",
-                      style: GoogleFonts.lato(
+                      style: GoogleFonts.roboto(
                         textStyle: TextStyle(
                           fontWeight: FontWeight.w400,
                           color: Color.fromRGBO(101, 101, 101, 1).withOpacity(0.7),
@@ -178,7 +207,6 @@ class _ReadingPageState extends State<ReadingPage> {
                   height: size.height * 0.02,
                 ),
                 Container(
-                  //color: Colors.amber,
                   height: size.height * 0.1,
                   child: LayoutBuilder(
                     builder: (context, constraints) {
@@ -190,11 +218,9 @@ class _ReadingPageState extends State<ReadingPage> {
                             child: InkWell(
                               onTap: () {},
                               borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
-                              //splashColor: Colors.grey,
                               child: Container(
                                 height: constraints.maxHeight * 0.45,
                                 width: constraints.maxWidth * 0.9 / 5,
-                                //color: Colors.white,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
                                 ),
@@ -210,13 +236,11 @@ class _ReadingPageState extends State<ReadingPage> {
                           Material(
                             borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45),
                             child: InkWell(
-                              onTap: () {},
+                              onTap: summarizeText,
                               borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
-                              //splashColor: Colors.grey,
                               child: Container(
                                 height: constraints.maxHeight * 0.45,
                                 width: constraints.maxWidth * 0.9 / 5,
-                                //color: Colors.white,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
                                 ),
@@ -234,11 +258,9 @@ class _ReadingPageState extends State<ReadingPage> {
                             child: InkWell(
                               onTap: () {},
                               borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
-                              //splashColor: Colors.grey,
                               child: Container(
                                 height: constraints.maxHeight * 0.45,
                                 width: constraints.maxWidth * 0.9 / 5,
-                                //color: Colors.white,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
                                 ),
@@ -256,11 +278,9 @@ class _ReadingPageState extends State<ReadingPage> {
                             child: InkWell(
                               onTap: () {},
                               borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
-                              //splashColor: Colors.grey,
                               child: Container(
                                 height: constraints.maxHeight * 0.45,
                                 width: constraints.maxWidth * 0.9 / 5,
-                                //color: Colors.white,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
                                 ),
@@ -278,11 +298,9 @@ class _ReadingPageState extends State<ReadingPage> {
                             child: InkWell(
                               onTap: () {},
                               borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
-                              //splashColor: Colors.grey,
                               child: Container(
                                 height: constraints.maxHeight * 0.45,
                                 width: constraints.maxWidth * 0.9 / 5,
-                                //color: Colors.white,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(constraints.maxHeight * 0.45 / 2),
                                 ),

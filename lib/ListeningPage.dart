@@ -30,7 +30,7 @@ class _ListeningPageState extends State<ListeningPage> {
   }
 
   Future<void> _speak(String text) async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("vi-VN");
     await flutterTts.setPitch(1.0);
     await flutterTts.speak(text);
   }
@@ -45,9 +45,9 @@ class _ListeningPageState extends State<ListeningPage> {
 
   @override
   void initState() {
-    super.initState();
-    play = Icons.pause;
-    played = true;
+  super.initState();
+  played = false; 
+  playIcon();
   }
 
   @override
@@ -107,7 +107,7 @@ class _ListeningPageState extends State<ListeningPage> {
                                   child: FittedBox(
                                     child: Text(
                                       widget.bookname,
-                                      style: GoogleFonts.lato(
+                                      style: GoogleFonts.roboto(
                                         textStyle: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
@@ -122,7 +122,7 @@ class _ListeningPageState extends State<ListeningPage> {
                                   child: FittedBox(
                                     child: Text(
                                       "Chapter 2",
-                                      style: GoogleFonts.lato(
+                                      style: GoogleFonts.roboto(
                                         textStyle: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: Colors.white,
@@ -210,7 +210,7 @@ class _ListeningPageState extends State<ListeningPage> {
                         child: FittedBox(
                           child: Text(
                             "17:13",
-                            style: GoogleFonts.lato(),
+                            style: GoogleFonts.roboto(),
                           ),
                         ),
                       ),
@@ -265,7 +265,7 @@ class _ListeningPageState extends State<ListeningPage> {
                                   setState(() {
                                     played = true;
                                     playIcon();
-                                    _speak("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum lectus lacus, in cursus sem volutpat non. Sed nisi ex, vestibulum quis lobortis et, scelerisque hendrerit velit. Maecenas convallis volutpat quam a luctus. Morbi metus massa, cursus in arcu et, dapibus iaculis odio. Quisque suscipit, erat ac ornare iaculis, nibh sapien semper dui, imperdiet cursus turpis libero ut justo. Duis in tincidunt neque, eu iaculis nulla. In lorem dolor, porttitor hendrerit dui feugiat, convallis tincidunt lectus. Nullam auctor, lorem ut consectetur dictum, quam mauris eleifend arcu, eu fermentum urna neque sit amet ante. Maecenas libero felis, consectetur at metus eu, vestibulum sollicitudin erat. Nullam euismod sapien eu dui mollis, vel imperdiet urna commodo. Maecenas semper elementum magna, eu commodo quam finibus non. Mauris condimentum nisl leo, quis dignissim augue gravida et. Pellentesque tincidunt vitae erat nec interdum. Praesent a dui sagittis, luctus metus nec, accumsan eros. Sed quis scelerisque velit, ut ultrices tellus. Praesent dignissim lacus a lectus suscipit sagittis. Aliquam luctus nibh at consectetur rutrum. Proin congue mauris elementum varius placerat. Pellentesque vulputate ante eu nunc placerat, eu egestas elit ornare. Nullam ac ipsum ultrices ante venenatis faucibus vehicula quis risus. Vestibulum ut turpis quis sapien dictum mattis eget iaculis nisl. In porttitor felis eu metus eleifend pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique nulla sed felis sollicitudin consequat.");
+                                    _speak("Harry Potter là một loạt tiểu thuyết huyền bí gồm bảy phần của nhà văn Anh Quốc J. K. Rowling. Bộ truyện viết về những cuộc phiêu lưu phù thủy của cậu bé Harry Potter cùng hai người bạn thân là Ron Weasley và Hermione Granger, lấy bối cảnh tại Trường Phù thủy và Pháp sư Hogwarts ở nước Anh. Những cuộc phiêu lưu tập trung vào cuộc chiến của Harry Potter trong việc chống lại tên Chúa tể Hắc ám Voldemort – người có tham vọng muốn trở nên bất tử, thống trị thế giới phù thủy, nô dịch hóa những người phi pháp thuật và tiêu diệt những ai cản đường hắn, đặc biệt là Harry Potter.");
                                   });
                                 }
                               },
