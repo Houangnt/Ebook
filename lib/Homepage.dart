@@ -92,7 +92,7 @@ class _HomepageState extends State<Homepage> {
                           color: Colors.white,
                           child: Center(
                             child: Text(
-                              " “Transform every word into sound, opening a new window for the blind to explore the world of each story”",
+                              " “Transform every word into sound, opening a new window for the blind to explore the world”",
                               textAlign: TextAlign.center,
                               maxLines: 3,
                               overflow: TextOverflow.fade,

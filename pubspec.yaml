@@ -26,6 +26,8 @@ dependencies:
   cupertino_icons: ^1.0.5
   google_fonts: ^6.2.1
   http: ^1.1.2
+  alan_voice: ^3.0.0
+
 
 dev_dependencies:
   flutter_test:

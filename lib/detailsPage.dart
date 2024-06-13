@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:alan_voice/alan_voice.dart';
 import 'ReadingPage.dart';
 import 'ListeningPage.dart';
+import 'package:flutter_tts/flutter_tts.dart'; // Import the TTS package
 
 class DetailsPage extends StatefulWidget {
   final String imageAddress;
@@ -21,6 +22,92 @@ class DetailsPage extends StatefulWidget {
 
 class _DetailsPageState extends State<DetailsPage> {
   @override
+    @override
+  void initState() {
+    super.initState();
+
+    AlanVoice.addButton(
+      "1038c7f749b4e6f9c0929e7c6282af902e956eca572e1d8b807a3e2338fdd0dc/stage",
+      buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT,
+    );
+
+    AlanVoice.onCommand.add((command) => _handleVoiceCommand(command.data));
+  }
+
+  @override
+  void dispose() {
+    AlanVoice.onCommand.clear();
+    super.dispose();
+  }
+
+  void _handleVoiceCommand(Map<String, dynamic> command) {
+        switch (command["command"]) {
+          case "listen book":
+            _navigateToListeningPage();
+            _playBook();
+            break;
+          case "stop read book":
+              _stopPlay();
+            break;
+          case "read book":
+            _navigateToReadingPage();
+            break;
+          case "back home":
+              _navigateBackToDetailsPage();
+            break;
+          default:
+            print("Unknown command");
+            break;
+        }
+  }
+
+
+  void _navigateToListeningPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ListeningPage(
+          authorname: widget.authorname,
+          bookname: widget.bookname,
+          imageAddress: widget.imageAddress,
+        ),
+      ),
+    );
+  }
+
+  void _navigateToReadingPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ReadingPage(
+          bookname: widget.bookname,
+          authorname: widget.authorname,
+          imageAddress: widget.imageAddress,
+        ),
+      ),
+    );
+  }
+  void _navigateBackToDetailsPage() {
+    Navigator.popUntil(context, (route) => route.isFirst);
+  }
+  FlutterTts flutterTts = FlutterTts(); // Initialize the TTS instance
+
+  Future<void> _speak(String text) async {
+    await flutterTts.setLanguage("vi-VN");
+    await flutterTts.setPitch(1.0);
+    await flutterTts.speak(text);
+  }
+  void _stopPlay(){
+      setState(() {
+        flutterTts.stop();
+    });
+  }
+  void _playBook() {
+      setState(() {
+        _speak("Harry Potter là một loạt tiểu thuyết huyền bí gồm bảy phần của nhà văn Anh Quốc J. K. Rowling. Bộ truyện viết về những cuộc phiêu lưu phù thủy của cậu bé Harry Potter cùng hai người bạn thân là Ron Weasley và Hermione Granger, lấy bối cảnh tại Trường Phù thủy và Pháp sư Hogwarts ở nước Anh. Những cuộc phiêu lưu tập trung vào cuộc chiến của Harry Potter trong việc chống lại tên Chúa tể Hắc ám Voldemort – người có tham vọng muốn trở nên bất tử, thống trị thế giới phù thủy, nô dịch hóa những người phi pháp thuật và tiêu diệt những ai cản đường hắn, đặc biệt là Harry Potter.");
+      });
+  }
+                            
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
 
