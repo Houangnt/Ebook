@@ -46,7 +46,7 @@ class _DetailsPageState extends State<DetailsPage> {
             _navigateToListeningPage();
             _playBook();
             break;
-          case "stop read book":
+          case "stop reading book":
               _stopPlay();
             break;
           case "read book":
