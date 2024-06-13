@@ -92,15 +92,15 @@ class _HomepageState extends State<Homepage> {
                           color: Colors.white,
                           child: Center(
                             child: Text(
-                              " “Transform every word into sound, opening a new window for the blind to explore the world”",
+                              " Hỗ trợ tóm tắt, đọc báo cho người khiếm thị",
                               textAlign: TextAlign.center,
                               maxLines: 3,
                               overflow: TextOverflow.fade,
                               style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
-                                      fontWeight: FontWeight.w400,
+                                      fontWeight: FontWeight.w600,
                                       color: Colors.brown.withOpacity(0.7),
-                                      fontSize: 20)),
+                                      fontSize: 23)),
                             ),
                           ),
                         ),
@@ -169,7 +169,7 @@ class _HomepageState extends State<Homepage> {
                                       focusedBorder: OutlineInputBorder(
                                           borderSide: BorderSide.none),
                                       filled: false,
-                                      hintText: "Search by Title,Author,Genre",
+                                      hintText: "Tìm kiếm theo tiêu đề, tác giả, thể loại",
                                       hintStyle: GoogleFonts.roboto(
                                           textStyle: TextStyle(
                                               fontSize: 13,
@@ -237,7 +237,7 @@ class _HomepageState extends State<Homepage> {
                                             child: FittedBox(
                                               fit: BoxFit.scaleDown,
                                               child: Text(
-                                                "Continue Reading",
+                                                "Tiếp tục đọc",
                                                 style: GoogleFonts.roboto(
                                                     textStyle: TextStyle(
                                                         fontWeight:
@@ -255,7 +255,7 @@ class _HomepageState extends State<Homepage> {
                                             child: FittedBox(
                                               fit: BoxFit.scaleDown,
                                               child: Text(
-                                                "view all",
+                                                "Hiện tất cả",
                                                 style: GoogleFonts.roboto(
                                                     textStyle: TextStyle(
                                                         fontWeight:
@@ -309,10 +309,10 @@ class _HomepageState extends State<Homepage> {
                                                             constraints.maxWidth *
                                                                 0.025),
                                                     width: constraints.maxWidth *
-                                                        0.34,
+                                                        0.7,
                                                     height:
                                                         constraints.maxHeight *
-                                                            0.84,
+                                                            0.7,
                                                     decoration: BoxDecoration(
                                                         color: Colors.white,
                                                         borderRadius: BorderRadius
@@ -348,7 +348,7 @@ class _HomepageState extends State<Homepage> {
                                                 height: constraints.maxHeight *
                                                     0.07,
                                                 width:
-                                                    constraints.maxWidth * 0.39,
+                                                    constraints.maxWidth * 0.5,
                                                 //color: Colors.red,
                                                 child: FittedBox(
                                                     alignment:
@@ -359,7 +359,9 @@ class _HomepageState extends State<Homepage> {
                                                           color: Color.fromRGBO(
                                                               66, 66, 86, 1),
                                                           fontWeight:
-                                                              FontWeight.w400),
+                                                              FontWeight.w600),
+                                                      overflow: TextOverflow.ellipsis,
+                                                      maxLines: 3, // Set max lines to show
                                                     )),
                                               ),
                                               Container(
@@ -484,7 +486,7 @@ class _HomepageState extends State<Homepage> {
                                               alignment: Alignment.topLeft,
                                               fit: BoxFit.scaleDown,
                                               child: Text(
-                                                "Popular",
+                                                "Mới nhất",
                                                 style: GoogleFonts.roboto(
                                                     textStyle: TextStyle(
                                                         fontWeight:
@@ -503,7 +505,7 @@ class _HomepageState extends State<Homepage> {
                                               alignment: Alignment.centerRight,
                                               fit: BoxFit.scaleDown,
                                               child: Text(
-                                                "view all",
+                                                "Hiện tất cả",
                                                 style: GoogleFonts.roboto(
                                                     textStyle: TextStyle(
                                                         fontWeight:
@@ -555,7 +557,7 @@ class _HomepageState extends State<Homepage> {
                                                             0.3)),
                                             child: FittedBox(
                                                 child: Text(
-                                              "Self-Help",
+                                              "Thời sự",
                                               style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       color: indx == 0
@@ -590,7 +592,7 @@ class _HomepageState extends State<Homepage> {
                                                             0.3)),
                                             child: FittedBox(
                                                 child: Text(
-                                              "Finance",
+                                              "Kinh tế",
                                               style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       color: indx == 1
@@ -625,7 +627,7 @@ class _HomepageState extends State<Homepage> {
                                                             0.3)),
                                             child: FittedBox(
                                                 child: Text(
-                                              "Fantasy",
+                                              "Thể thao",
                                               style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       color: indx == 2
@@ -660,7 +662,7 @@ class _HomepageState extends State<Homepage> {
                                                             0.3)),
                                             child: FittedBox(
                                                 child: Text(
-                                              "Comedy",
+                                              "Pháp luật",
                                               style: GoogleFonts.roboto(
                                                   textStyle: TextStyle(
                                                       color: indx == 3

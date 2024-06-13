@@ -23,10 +23,10 @@ List<Booksdata> continueReading = [
       percentageCompleted: 64,
       imagePath: 'assets/images/APJ.jpg'),
   Booksdata(
-      bookname: "The Arsonist",
-      authorName: "Chloe Hooper",
+      bookname: "Phó thủ tướng yêu cầu có kịch bản giá điện trong tháng 6",
+      authorName: "Kinh doanh",
       percentageCompleted: 16,
-      imagePath: 'assets/images/ChloeHooper.jpg'),
+      imagePath: 'assets/images/phothutuong.jpeg'),
   Booksdata(
       bookname: "Harry Potter",
       authorName: "J.K Rowling",
