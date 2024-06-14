@@ -302,7 +302,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       width: constraints.maxWidth,
                                       child: FittedBox(
                                         child: Text(
-                                          "2010",
+                                          "Thứ tư, 12/6/2024, 17:43 (GMT+7)",
                                           style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   color: Color.fromRGBO(
@@ -321,7 +321,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       child: FittedBox(
                                         fit: BoxFit.scaleDown,
                                         child: Text(
-                                          "Published in",
+                                          "Ngày đăng",
                                           style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   fontSize: 20,
@@ -356,7 +356,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       width: constraints.maxWidth,
                                       child: FittedBox(
                                         child: Text(
-                                          "156",
+                                          "15p",
                                           style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   color: Color.fromRGBO(
@@ -373,7 +373,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       child: FittedBox(
                                         fit: BoxFit.scaleDown,
                                         child: Text(
-                                          "Pages",
+                                          "Thời gian đọc",
                                           style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   fontSize: 20,
@@ -424,7 +424,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       child: FittedBox(
                                         fit: BoxFit.scaleDown,
                                         child: Text(
-                                          "Reviews",
+                                          "Số lượt đọc",
                                           style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   fontSize: 20,
@@ -452,7 +452,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   width: size.width,
                   child: FittedBox(
                     child: Text(
-                      "About",
+                      "Giới thiệu",
                       style: GoogleFonts.roboto(
                           textStyle: TextStyle(
                         fontWeight: FontWeight.w400,
@@ -468,7 +468,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   width: size.width,
                   child: Center(
                     child: Text(
-                      "Harry Potter là một loạt tiểu thuyết huyền bí gồm bảy phần của nhà văn Anh Quốc J. K. Rowling. Bộ truyện viết về những cuộc phiêu lưu phù thủy của cậu bé Harry Potter cùng hai người bạn thân là Ron Weasley và Hermione Granger.",
+                      "Phó thủ tướng yêu cầu các bộ ngành đề xuất thời điểm, mức độ điều chỉnh giá điện, dịch vụ y tế, giáo dục trong tháng 6.",
                       overflow: TextOverflow.fade,
                       style: GoogleFonts.roboto(
                           textStyle: TextStyle(
