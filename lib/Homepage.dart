@@ -348,7 +348,7 @@ class _HomepageState extends State<Homepage> {
                                                 height: constraints.maxHeight *
                                                     0.07,
                                                 width:
-                                                    constraints.maxWidth * 0.5,
+                                                    constraints.maxWidth * 0.75,
                                                 //color: Colors.red,
                                                 child: FittedBox(
                                                     alignment:
@@ -356,12 +356,11 @@ class _HomepageState extends State<Homepage> {
                                                     child: Text(
                                                       current[index].bookname,
                                                       style: GoogleFonts.roboto(
-                                                          color: Color.fromRGBO(
-                                                              66, 66, 86, 1),
+                                                          color: Color.fromRGBO(66, 66, 86, 1),
                                                           fontWeight:
                                                               FontWeight.w600),
                                                       overflow: TextOverflow.ellipsis,
-                                                      maxLines: 3, // Set max lines to show
+                                                      maxLines: 3, 
                                                     )),
                                               ),
                                               Container(

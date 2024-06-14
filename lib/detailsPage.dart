@@ -250,7 +250,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   height: size.height * 0.025,
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: size.width * 0.33),
+                  padding: EdgeInsets.symmetric(horizontal: size.width * 0.13),
                   height: size.height * 0.06,
                   width: size.width,
                   //color: Colors.red,
