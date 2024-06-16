@@ -27,7 +27,7 @@ class _DetailsPageState extends State<DetailsPage> {
     super.initState();
 
     AlanVoice.addButton(
-      "1038c7f749b4e6f9c0929e7c6282af902e956eca572e1d8b807a3e2338fdd0dc/stage",
+      "41dee05d07c0647d4afd57f96e6e6b162e956eca572e1d8b807a3e2338fdd0dc/stage",
       buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT,
     );
 
@@ -196,8 +196,8 @@ class _DetailsPageState extends State<DetailsPage> {
                 Hero(
                   tag: Text("Haha"),
                   child: Container(
-                    height: size.height * 0.4,
-                    width: size.width * 0.55,
+                    height: size.height * 0.3,
+                    width: size.width * 0.7,
                     child: LayoutBuilder(
                       builder: (context, constraints) {
                         return Stack(
@@ -250,7 +250,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   height: size.height * 0.025,
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: size.width * 0.13),
+                  padding: EdgeInsets.symmetric(horizontal: size.width * 0.03),
                   height: size.height * 0.06,
                   width: size.width,
                   //color: Colors.red,
@@ -302,7 +302,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       width: constraints.maxWidth,
                                       child: FittedBox(
                                         child: Text(
-                                          "Thứ tư, 12/6/2024, 17:43 (GMT+7)",
+                                          "12/6/2024, 17:43",
                                           style: GoogleFonts.roboto(
                                               textStyle: TextStyle(
                                                   color: Color.fromRGBO(

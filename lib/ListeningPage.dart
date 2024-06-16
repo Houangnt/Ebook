@@ -85,7 +85,7 @@ class _ListeningPageState extends State<ListeningPage> {
                           InkWell(
                             onTap: () => Navigator.pop(context),
                             child: Container(
-                              padding: EdgeInsets.all(constraints.maxHeight * 0.18),
+                              padding: EdgeInsets.all(constraints.maxHeight * 0.05),
                               height: constraints.maxHeight * 0.8,
                               width: constraints.maxWidth * 0.15,
                               child: FittedBox(
@@ -102,11 +102,11 @@ class _ListeningPageState extends State<ListeningPage> {
                             child: Column(
                               children: [
                                 Container(
-                                  height: constraints.maxHeight * 0.85 * 0.7,
+                                  height: constraints.maxHeight * 0.85 * 0.1,
                                   width: constraints.maxWidth * 0.35,
                                   child: FittedBox(
                                     child: Text(
-                                      widget.bookname,
+                                      "",
                                       style: GoogleFonts.roboto(
                                         textStyle: TextStyle(
                                           fontWeight: FontWeight.bold,
@@ -117,15 +117,15 @@ class _ListeningPageState extends State<ListeningPage> {
                                   ),
                                 ),
                                 Container(
-                                  height: constraints.maxHeight * 0.85 * 0.3,
-                                  width: constraints.maxWidth * 0.35,
+                                  height: constraints.maxHeight * 0.85 * 0.9,
+                                  width: constraints.maxWidth * 0.9,
                                   child: FittedBox(
                                     child: Text(
-                                      "Chapter 2",
+                                      "Phó thủ tướng yêu cầu có kịch bản giá điện trong tháng 6",
                                       style: GoogleFonts.roboto(
                                         textStyle: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.white,
+                                          color: Colors.black,
                                         ),
                                       ),
                                     ),
@@ -265,7 +265,7 @@ class _ListeningPageState extends State<ListeningPage> {
                                   setState(() {
                                     played = true;
                                     playIcon();
-                                    _speak("Harry Potter là một loạt tiểu thuyết huyền bí gồm bảy phần của nhà văn Anh Quốc J. K. Rowling. Bộ truyện viết về những cuộc phiêu lưu phù thủy của cậu bé Harry Potter cùng hai người bạn thân là Ron Weasley và Hermione Granger, lấy bối cảnh tại Trường Phù thủy và Pháp sư Hogwarts ở nước Anh. Những cuộc phiêu lưu tập trung vào cuộc chiến của Harry Potter trong việc chống lại tên Chúa tể Hắc ám Voldemort – người có tham vọng muốn trở nên bất tử, thống trị thế giới phù thủy, nô dịch hóa những người phi pháp thuật và tiêu diệt những ai cản đường hắn, đặc biệt là Harry Potter.");
+                                    _speak("Phó thủ tướng yêu cầu các bộ ngành đề xuất thời điểm, mức độ điều chỉnh giá điện, dịch vụ y tế, giáo dục trong tháng 6.Đầu năm, Bộ Công Thương kiến nghị điều chỉnh giá điện trong năm nay, để phản ánh biến động các chi phí đầu vào và giúp Tập đoàn Điện lực Việt Nam (EVN) có nguồn lực thanh toán cho chủ đầu tư các nhà máy điện. Tuy nhiên, Bộ Công Thương hiện chưa đề xuất phương án giá cụ thể, theo báo cáo từ Bộ Tài chính.Tại cuộc họp Ban chỉ đạo điều hành giá ngày 12/6, Phó thủ tướng Lê Minh Khái yêu cầu Bộ Công Thương lên kịch bản, trong đó đề xuất thời điểm, mức độ điều chỉnh giá điện trong tháng 6. Ngoài giá điện, ông cũng yêu cầu ngành giáo dục, y tế có kịch bản điều hành các mặt hàng trong tháng này.Hạn chót 30/6 phải có kịch bản để Ban Chỉ đạo điều hành giá cân nhắc, cho ý kiến, Phó thủ tướng nói, thêm rằng nếu không đảm bảo thời gian, để tác động đến CPI, các bộ ngành phải chịu trách nhiệm. Đầu tháng 2, Thủ tướng Phạm Minh Chính từng lưu ý các cơ quan có lộ trình điều chỉnh giá điện phù hợp thị trường, không giật cục, nóng vội. Tinh thần là giá điện cạnh tranh nhưng phải có sự điều tiết của Nhà nước, Thủ tướng nói.Song, điện vốn là mặt hàng đặc biệt, được sử dụng nhiều, ảnh hưởng lớn tới đời sống và sản xuất, kinh doanh. Mặt khác, TS. Nguyễn Bích Lâm, nguyên Tổng cục trưởng Tổng cục Thống kê (GSO) từng ước tính, giá năng lượng tăng 8% có thể làm CPI thêm 0,4-0,5% (trực tiếp và gián tiếp). Vì thế, giới chuyên gia cho rằng việc tăng giá mặt hàng này cần được tính toán và có lộ trình phù hợp về mức độ, thời điểm. Điều này đảm bảo tính thị trường, giảm lỗ cho EVN nhưng phải đảm bảo mục tiêu kiểm soát lạm phát. Từ 15/5, cơ chế điều chỉnh giá bán lẻ điện thực hiện theo Quyết định 05/2024. Theo đó, giá điện được xét thay đổi ba tháng một lần khi chi phí đầu vào tăng từ 3% trở lên. Gần nhất, giá điện tăng 4,5% vào tháng 11/2023. Năm nay, Việt Nam đặt mục tiêu kiểm soát CPI bình quân cả năm ở mức 4-4,5%. Bộ Tài chính và Tổng cục Thống kê ước lạm phát bình quân năm nay tăng khoảng 3,72-4,5%, nằm trong giới hạn đặt ra. Còn Ngân hàng Nhà nước dự báo con số này có thể lên 4,6%, nếu nhiều yếu tố bất lợi cùng xảy ra.Ngoài giá điện, tại cuộc họp, Thứ trưởng Tài chính Lê Tấn Cận cho rằng dịch vụ giáo dục, y tế cũng là yếu tố gây áp lực lên mặt bằng giá do tới kỳ điều chỉnh theo lộ trình. Cùng đó, vé máy bay trong nước cũng chịu áp lực điều chỉnh từ thế giới. Chi phí logistics, phụ thu hàng hóa container tại cảng biển tăng mạnh... cũng gây áp lực đến chi phí của doanh nghiệp. Ngược lại, lạm phát toàn cầu có thể hạ nhiệt trong năm 2024 giúp Việt Nam bớt áp lực từ kênh nhập khẩu lạm phát. Để kiểm soát, Phó thủ tướng Lê Minh Khái đề nghị các bộ ngành, địa phương không chủ quan trong điều hành, vì áp lực lạm phát thời gian tới rất lớn. Các bộ phải theo sát tình hình kinh tế, biến động địa chính trị để có kịch bản ứng phó. Ông cũng yêu cầu các cơ quan quản lý đảm bảo cung ứng, lưu thông hàng hóa, dịch vụ, nhất là xăng dầu và các mặt hàng chiến lược có khả năng bị ảnh hưởng từ sự đứt gãy chuỗi cung ứng toàn cầu và xung đột địa chính trị.");
                                   });
                                 }
                               },
