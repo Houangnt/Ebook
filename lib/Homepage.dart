@@ -88,7 +88,7 @@ class _HomepageState extends State<Homepage> {
                         Container(
                           padding: EdgeInsets.symmetric(
                               horizontal: constraints.maxWidth * 0.02),
-                          height: constraints.maxHeight * 0.7,
+                          height: constraints.maxHeight * 0.5,
                           color: Colors.white,
                           child: Center(
                             child: Text(
@@ -100,7 +100,7 @@ class _HomepageState extends State<Homepage> {
                                   textStyle: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       color: Colors.brown.withOpacity(0.7),
-                                      fontSize: 23)),
+                                      fontSize: 20)),
                             ),
                           ),
                         ),
@@ -222,8 +222,8 @@ class _HomepageState extends State<Homepage> {
                                   //color: Colors.purple,
                                   width: constraints.maxWidth,
                                   height: constraints.maxHeight * 0.15,
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: constraints.maxWidth * 0.03),
+                                  // padding: EdgeInsets.symmetric(
+                                  //     horizontal: constraints.maxWidth * 0.03),0
                                   child: LayoutBuilder(
                                     builder: (context, constraints) {
                                       return Row(
@@ -418,29 +418,29 @@ class _HomepageState extends State<Homepage> {
                                                                 )
                                                               ],
                                                             )),
-                                                        Container(
-                                                          height: constraints
-                                                              .maxHeight,
-                                                          width: constraints
-                                                                  .maxWidth *
-                                                              0.2,
-                                                          child: FittedBox(
-                                                              child: Text(
-                                                            current[index]
-                                                                    .percentageCompleted
-                                                                    .toString() +
-                                                                "%",
-                                                            style: GoogleFonts.roboto(
-                                                                textStyle: TextStyle(
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w400,
-                                                                    color: Colors
-                                                                        .black
-                                                                        .withOpacity(
-                                                                            0.7))),
-                                                          )),
-                                                        )
+                                                        // Container(
+                                                        //   height: constraints
+                                                        //       .maxHeight,
+                                                        //   width: constraints
+                                                        //           .maxWidth *
+                                                        //       0.1,
+                                                        //   child: FittedBox(
+                                                        //       child: Text(
+                                                        //     current[index]
+                                                        //             .percentageCompleted
+                                                        //             .toString() +
+                                                        //         "%",
+                                                        //     style: GoogleFonts.roboto(
+                                                        //         textStyle: TextStyle(
+                                                        //             fontWeight:
+                                                        //                 FontWeight
+                                                        //                     .w400,
+                                                        //             color: Colors
+                                                        //                 .black
+                                                        //                 .withOpacity(
+                                                        //                     0.7))),
+                                                        //   )),
+                                                        // )
                                                       ],
                                                     );
                                                   },
@@ -459,7 +459,7 @@ class _HomepageState extends State<Homepage> {
                     ),
                     Container(
                       //color: Colors.red,
-                      height: size.height * 0.45,
+                      height: size.height * 0.4,
                       width: double.infinity,
                       child: LayoutBuilder(
                         builder: (context, constraints) {
@@ -697,9 +697,9 @@ class _HomepageState extends State<Homepage> {
                                                         constraints.maxWidth *
                                                             0.025),
                                                 width:
-                                                    constraints.maxWidth * 0.35,
+                                                    constraints.maxWidth * 0.7,
                                                 height: constraints.maxHeight *
-                                                    0.84,
+                                                    0.7,
                                                 decoration: BoxDecoration(
                                                     color: Colors.white,
                                                     borderRadius:
@@ -777,7 +777,7 @@ class _HomepageState extends State<Homepage> {
                                                 height: constraints.maxHeight *
                                                     0.07,
                                                 width:
-                                                    constraints.maxWidth * 0.39,
+                                                    constraints.maxWidth * 0.75,
                                                 //color: Colors.red,
                                                 child: FittedBox(
                                                     alignment:
@@ -788,7 +788,8 @@ class _HomepageState extends State<Homepage> {
                                                           color: Color.fromRGBO(
                                                               66, 66, 86, 1),
                                                           fontWeight:
-                                                              FontWeight.w600),
+                                                              FontWeight.w600,
+                                                          fontSize: 50),
                                                     )),
                                               ),
                                               Container(
