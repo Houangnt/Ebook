@@ -1,7 +1,7 @@
 
 
       
-# This is a Ebook app UI made using flutter.
+# This is a ENews app UI made using flutter.
 <p align="">
   <img src="https://github.com/Houangnt/Ebook/blob/main/assets/images/1.png" width="180" title="Homepage"> ➜ Content     
   <img src="https://github.com/Houangnt/Ebook/blob/main/assets/images/2.png" width="180" title="ContentPage">  ➜ Listen
